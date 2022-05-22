@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack serve --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "",
+    "deploy": "firebase deploy --only hosting",
     "build": "webpack --config webpack.config.js"
   },
   "license": "MIT",
