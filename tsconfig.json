@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "jsx": "react-jsx",
+        "outDir": "./build/",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "lib": ["dom", "esnext"],
+        "strict": true,
+        "sourceMap": true,
+        "target": "esnext",
+        "skipLibCheck": true
+    },
+    "include": ["src/index.tsx"],
+    "exclude": ["node_modules"]
+}
