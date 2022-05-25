@@ -9,7 +9,7 @@ export const HomeStyle = {
   `,
   WrapperA: styled.div`
     width: 100%;
-    height: 87px;
+    height: 70px;
     margin-top: 10px;
     background-color: white;
     border: grey 1px;
@@ -19,9 +19,10 @@ export const HomeStyle = {
     border-radius: 10px;
     margin-top: 10px;
     width: 100%;
-    height: 130px;
+    height: 110px;
     background-color: white;
     padding: 10px;
+    display: flex;
   `,
   align: styled.div`
     display: flex;
@@ -44,19 +45,55 @@ export const HomeStyle = {
   line: styled.div`
     width: 1px; /* Line width */
     background-color: #e0dcdc; /* Line color */
-    height: 60px; /* Override in-line if you want specific height. */
+    height: 50px; /* Override in-line if you want specific height. */
     margin: 0 auto;
     text-align: center;
-    margin-top: 14px;
+    margin-top: 10px;
   `,
 
   img: styled.img`
     bottom: 8.33%;
     border-radius: 10px;
-    width: 130px;
-    height: 110px;
+    width: 110px;
+    height: 90px;
   `,
-  text: styled.p``,
+  wrapinfo: styled.div`
+    width: 68%;
+    padding: 0.4rem;
+    border-radius: 5px;
+  `,
+  text: styled.p`
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  `,
+  text_company: styled.p`
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  `,
+  text_product: styled.p`
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 5px;
+  `,
+  text_from: styled.p`
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 5px;
+  `,
   title_btn: styled.h6`
     width: 124px;
     height: 27px;
@@ -71,7 +108,6 @@ export const HomeStyle = {
     width: fit-content;
     heigth: fit-content;
     float: left;
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;

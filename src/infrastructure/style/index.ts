@@ -12,3 +12,6 @@ export * from "./button";
 export * from "./modal";
 export * from "./admin";
 export * from "./members";
+export * from "./pagenav";
+export * from "./add_card";
+export * from "./productinfo";

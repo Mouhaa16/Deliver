@@ -5,3 +5,8 @@ export * from "./carousel";
 export * from "./services";
 export * from "./package";
 export * from "./switch";
+export * from "./page_nav";
+export * from "./address_card";
+export * from "./plusIcon";
+export * from "./product_info";
+export * from "./pageTitle";
