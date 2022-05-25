@@ -10,3 +10,5 @@ export * from "./address_card";
 export * from "./plusIcon";
 export * from "./product_info";
 export * from "./pageTitle";
+export * from "./Subtab";
+export * from "./displayPrice";

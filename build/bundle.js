@@ -4155,6 +4155,44 @@ var App = () => {
 
 /***/ }),
 
+/***/ "./src/components/Subtab.tsx":
+/*!***********************************!*\
+  !*** ./src/components/Subtab.tsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SubTab": () => (/* binding */ SubTab)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _infrastructure_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../infrastructure/style */ "./src/infrastructure/style/index.ts");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/RightOutlined.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+var SubTab = prop => {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.wrap, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.text, {
+        children: prop.title
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.icon, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          onClick: e => prop.onClick(e)
+        })
+      })]
+    })
+  });
+};
+
+/***/ }),
+
 /***/ "./src/components/address_card.tsx":
 /*!*****************************************!*\
   !*** ./src/components/address_card.tsx ***!
@@ -4288,6 +4326,45 @@ var Carousel = _ref => {
 
 /***/ }),
 
+/***/ "./src/components/displayPrice.tsx":
+/*!*****************************************!*\
+  !*** ./src/components/displayPrice.tsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PriceCard": () => (/* binding */ PriceCard)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _infrastructure_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../infrastructure/style */ "./src/infrastructure/style/index.ts");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var PriceCard = props => {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.Display.Wrapper, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.Display.check, {
+        type: 'checkbox'
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.Display.line, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.Display.wrap, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.Display.price, {
+          children: "\u20A6 _ _"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.Display.button, {
+          type: 'button',
+          value: 'Next'
+        })]
+      })]
+    })
+  });
+};
+
+/***/ }),
+
 /***/ "./src/components/index.ts":
 /*!*********************************!*\
   !*** ./src/components/index.ts ***!
@@ -4306,8 +4383,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PageNav": () => (/* reexport safe */ _page_nav__WEBPACK_IMPORTED_MODULE_7__.PageNav),
 /* harmony export */   "PageTitle": () => (/* reexport safe */ _pageTitle__WEBPACK_IMPORTED_MODULE_11__.PageTitle),
 /* harmony export */   "PlusIcon": () => (/* reexport safe */ _plusIcon__WEBPACK_IMPORTED_MODULE_9__.PlusIcon),
+/* harmony export */   "PriceCard": () => (/* reexport safe */ _displayPrice__WEBPACK_IMPORTED_MODULE_13__.PriceCard),
 /* harmony export */   "ProductInfo": () => (/* reexport safe */ _product_info__WEBPACK_IMPORTED_MODULE_10__.ProductInfo),
 /* harmony export */   "Services": () => (/* reexport safe */ _services__WEBPACK_IMPORTED_MODULE_4__.Services),
+/* harmony export */   "SubTab": () => (/* reexport safe */ _Subtab__WEBPACK_IMPORTED_MODULE_12__.SubTab),
 /* harmony export */   "SwitchBtn": () => (/* reexport safe */ _switch__WEBPACK_IMPORTED_MODULE_6__.SwitchBtn)
 /* harmony export */ });
 /* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navbar */ "./src/components/navbar.tsx");
@@ -4322,6 +4401,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _plusIcon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./plusIcon */ "./src/components/plusIcon.tsx");
 /* harmony import */ var _product_info__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./product_info */ "./src/components/product_info.tsx");
 /* harmony import */ var _pageTitle__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pageTitle */ "./src/components/pageTitle.tsx");
+/* harmony import */ var _Subtab__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Subtab */ "./src/components/Subtab.tsx");
+/* harmony import */ var _displayPrice__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./displayPrice */ "./src/components/displayPrice.tsx");
+
+
 
 
 
@@ -4595,8 +4678,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _infrastructure_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../infrastructure/style */ "./src/infrastructure/style/index.ts");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/RightOutlined.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Subtab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Subtab */ "./src/components/Subtab.tsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -4604,21 +4687,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ProductInfo = () => {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.Wrapper, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.title, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.Wrapper, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.title, {
         children: "Product Info"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.search, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.input, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.search, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.input, {
           type: 'search',
           placeholder: 'Select product category'
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.wrap, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.text, {
-          children: "fill item information"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_1__.ProductInFo.icon, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Subtab__WEBPACK_IMPORTED_MODULE_2__.SubTab, {
+        title: "Item information",
+        onClick: function onClick(e) {
+          e.preventDefault();
+
+          try {
+            alert();
+          } catch (error) {
+            throw new Error("Function not implemented.");
+          }
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Subtab__WEBPACK_IMPORTED_MODULE_2__.SubTab, {
+        title: "Select Payment",
+        onClick: function onClick(e) {
+          e.preventDefault();
+
+          try {
+            alert();
+          } catch (error) {
+            throw new Error("Function not implemented.");
+          }
+        }
       })]
     })
   });
@@ -4964,25 +5063,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SendPackage = () => {
-  var _onClickPickUp = e => {
-    e.preventDefault();
-    alert();
-  };
-
-  var _onClickDestination = e => {
-    e.preventDefault();
-    alert();
-  };
-
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.PageNav, {
       title: 'Send Package'
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_infrastructure_style__WEBPACK_IMPORTED_MODULE_2__.Row.Wrapper, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.AddressCard, {
-        onClickDestination: e => _onClickDestination(e),
-        onClickPickUp: e => _onClickPickUp(e)
+        onClickDestination: e => {
+          e.preventDefault();
+
+          try {
+            alert();
+          } catch (error) {
+            throw new Error('Error occurred!');
+          }
+        },
+        onClickPickUp: e => {
+          e.preventDefault();
+
+          try {
+            alert();
+          } catch (error) {
+            throw new Error('Error occurred!');
+          }
+        }
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.ProductInfo, {})]
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.PriceCard, {})]
   });
 };
 
@@ -5226,6 +5331,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ButtonXMl": () => (/* reexport safe */ _button__WEBPACK_IMPORTED_MODULE_10__.ButtonXMl),
 /* harmony export */   "CSSReset": () => (/* reexport safe */ _reset__WEBPACK_IMPORTED_MODULE_2__.CSSReset),
 /* harmony export */   "DateCard": () => (/* reexport safe */ _datecard__WEBPACK_IMPORTED_MODULE_3__.DateCard),
+/* harmony export */   "Display": () => (/* reexport safe */ _priceCard__WEBPACK_IMPORTED_MODULE_17__.Display),
 /* harmony export */   "HomeStyle": () => (/* reexport safe */ _home__WEBPACK_IMPORTED_MODULE_6__.HomeStyle),
 /* harmony export */   "InputStyle": () => (/* reexport safe */ _input__WEBPACK_IMPORTED_MODULE_9__.InputStyle),
 /* harmony export */   "MobileNavbar": () => (/* reexport safe */ _mobile_nav__WEBPACK_IMPORTED_MODULE_0__.MobileNavbar),
@@ -5257,6 +5363,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pagenav__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pagenav */ "./src/infrastructure/style/pagenav.ts");
 /* harmony import */ var _add_card__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./add_card */ "./src/infrastructure/style/add_card.ts");
 /* harmony import */ var _productinfo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./productinfo */ "./src/infrastructure/style/productinfo.tsx");
+/* harmony import */ var _priceCard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./priceCard */ "./src/infrastructure/style/priceCard.tsx");
+
 
 
 
@@ -5446,6 +5554,34 @@ var Pagetitle = {
 
 /***/ }),
 
+/***/ "./src/infrastructure/style/priceCard.tsx":
+/*!************************************************!*\
+  !*** ./src/infrastructure/style/priceCard.tsx ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Display": () => (/* binding */ Display)
+/* harmony export */ });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+var Display = {
+  Wrapper: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([" \n        width: 100%;\n        height: 100px;\n        background: #FFFFFF;\n        position: fixed;\n        bottom: 0;\n        padding:0.5rem;"]))),
+  wrap: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n        padding:0.6rem;\n    "]))),
+  price: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h4(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n        font-family: 'Inter';\n        font-style: normal;\n        font-weight: 400;\n        font-size: 20px;\n        line-height: 24px;"]))),
+  button: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n        float:right;\n        width:140px;\n        background: #000000;\n        color:white;\n        padding:10px;\n        border-radius: 20px;\n        border:none;\n        text-decoration:none;\n        outline:none;\n    "]))),
+  check: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].input(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    background-color: #000000;\n    "]))),
+  line: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].hr(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n        background:#C4C4C4\n        width:95%;\n        margin:0 auto;      "])))
+};
+
+/***/ }),
+
 /***/ "./src/infrastructure/style/productinfo.tsx":
 /*!**************************************************!*\
   !*** ./src/infrastructure/style/productinfo.tsx ***!
@@ -5464,14 +5600,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var ProductInFo = {
-  Wrapper: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n        width: 100%;\n        height: 294px;\n        background: #FFFFFF;\n        border-radius: 10px;\n        margin-top:10px;\n        padding:1rem;\n    "]))),
+  Wrapper: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n        width: 100%;\n        height: fit-content;\n        background: #FFFFFF;\n        border-radius: 10px;\n        margin-top:10px;\n        padding:1rem;\n    "]))),
   title: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h5(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n        text-align:center;\n        font-family: 'Inter';\n        font-style: normal;\n        font-weight: 400;\n        font-size: 13px;\n        line-height: 15px;\n        margin-bottom:6px;\n    "]))),
-  wrap: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n        background: #EEEEEE;\n        width:100%;\n        margin-bottom:16px;\n\n    "]))),
+  wrap: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n        width:100%;\n        padding:2rem 0.5rem;\n    "]))),
   text: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h5(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n        font-family: 'Inter';\n        font-style: normal;\n        font-weight: 400;\n        font-size: 15px;\n        margin-bottom:6px;\n        float:left;\n        line-height: 15px;"]))),
-  search: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n        background: #EEEEEE;\n        border-radius: 16px;\n        margin-bottom:26px;\n        padding:0.8rem;"]))),
+  search: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n        background: #EEEEEE;\n        border-radius: 16px;\n        margin-bottom:5px;\n        padding:0.8rem;"]))),
   input: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].input(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n        text-decoration: none;\n        border: none;\n        outline: none;\n        width: 290px;\n        margin-left:10px;\n        background: #EEEEEE;\n        font-family: 'Inter';\n        font-style: normal;\n        font-weight: 400;\n        font-size: 15px;\n        line-height: 15px;\n\n  "]))),
   icon: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral([" float:right; "]))),
-  camera: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    "])))
+  camera: styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral([" "])))
 };
 
 /***/ }),

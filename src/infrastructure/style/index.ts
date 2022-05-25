@@ -15,3 +15,4 @@ export * from "./members";
 export * from "./pagenav";
 export * from "./add_card";
 export * from "./productinfo";
+export * from "./priceCard";

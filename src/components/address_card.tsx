@@ -20,7 +20,7 @@ export const AddressCard = (props: { onClickDestination(e: any): any, onClickPic
 
 
 const SelectButton = (prop: {
-    title: string, onClick(e: any): any;
+    title: string, onClick(e: any): any
 }) => {
     return (<>
         <Address.fill>
