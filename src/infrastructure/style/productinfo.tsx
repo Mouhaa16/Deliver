@@ -54,7 +54,73 @@ export const ProductInFo = {
   `,
 
     icon: styled.div` float:right; `,
-    camera: styled.div` `
+    wrapCard: styled.div`
+        width:100%;
+        background-color:grey;
+        height:300px;
+       
+    `,
+    card: styled.div`
+        width:100%;
+        height:fit-content;
+        padding:1rem;
+        background: #EEEEEE;
+        margin-bottom:10px;
+       `,
+    camera: styled.div`
+        width:80px;
+        height:80px;
+        background: white;
+        text-align:center;
+        padding:1rem;
+        margin:0 auto;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 15px;
+        color:#8E8D8D;
+           
+         `,
+    count: styled.div`
+       width:100%;
+       padding:1rem;
+       margin-bottom:8px;
+    `,
+    desc: styled.h4`
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+            `,
+    textArea: styled.textarea`
+      width:100%;
+      font-family: 'Georgia';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 15px;
+      padding:5px;
+      border:none;
+    `,
 
+    wrap_save: styled.div`
+        display:flex;
+        width:100%;
+        padding:1rem;
+        justify-content:center;
+    `,
+
+    save: styled.input`
+       border:none;
+       outline:none;
+       width:120px;
+       padding:1.2rem; 
+       background:#000000;
+       border-radius:25px;
+       color:white; 
+       margin: 0 auto;
+       `
 
 }

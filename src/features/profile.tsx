@@ -3,7 +3,7 @@ import { MobileNav, Nav, PageNav, PageTitle } from "../components"
 import { Row } from "../infrastructure/style"
 export const Profile = () => {
     return (<>
-        <Nav />
+        <PageTitle title={'Me'} />
         <MobileNav />
     </>)
 }

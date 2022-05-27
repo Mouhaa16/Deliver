@@ -3,7 +3,11 @@ import { ProductInFo } from "../infrastructure/style";
 import { SearchOutlined, RightOutlined } from '@ant-design/icons'
 import { Camera } from 'react-feather';
 import { SubTab } from "./Subtab";
-export const ProductInfo = () => {
+export const ProductInfo = (prop:
+    {
+        onItemInfoClick(e: any): any,
+        onSelectPayMethod(e: any): any
+    }) => {
     return (
         <>
             <ProductInFo.Wrapper>
@@ -11,25 +15,13 @@ export const ProductInfo = () => {
                 <ProductInFo.search>
                     <ProductInFo.input type={'search'} placeholder={'Select product category'} />
                 </ProductInFo.search>
-                <SubTab title="Item information" onClick={function (e: any) {
-                    e.preventDefault()
-                    try {
-                        alert()
-                    } catch (error) {
-                        throw new Error("Function not implemented.");
+                <SubTab title="Item information" onClick={
+                    (e) => prop.onItemInfoClick(e)
+                } />
 
-                    }
-                }} />
-
-                <SubTab title="Select Payment" onClick={function (e: any) {
-                    e.preventDefault()
-                    try {
-                        alert()
-                    } catch (error) {
-                        throw new Error("Function not implemented.");
-
-                    }
-                }} />
+                <SubTab title="Select Payment" onClick={
+                    (e) => prop.onSelectPayMethod(e)}
+                />
 
 
             </ProductInFo.Wrapper>

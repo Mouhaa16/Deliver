@@ -10,7 +10,6 @@ const MyAppComponent = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/notification" element={<Notification />} />
-                <Route path="/user" element={<Profile />} />
                 <Route path='/send/package' element={<SendPackage />} />
                 <Route path='/barcode' element={<BarCode />} />
                 <Route path='/me' element={<Profile />} />

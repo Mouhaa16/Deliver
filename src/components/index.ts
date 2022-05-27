@@ -12,3 +12,6 @@ export * from "./product_info";
 export * from "./pageTitle";
 export * from "./Subtab";
 export * from "./displayPrice";
+export * from "./bottom-drawer";
+export * from "./item_info";
+export * from "./counter";

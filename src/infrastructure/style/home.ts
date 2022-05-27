@@ -17,7 +17,7 @@ export const HomeStyle = {
   `,
   packagewrap: styled.div`
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 10px;=
     width: 100%;
     height: 110px;
     background-color: white;

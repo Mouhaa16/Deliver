@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { Modal_ } from '../infrastructure/style';
 import { IModal } from '../interfaces/modal';
 // import { Button } from '../components';
-import { Motion } from 'react-motion';
 export const BModal: FC<IModal> = ({ children, show, handleClose }) => {
     return (
         <>

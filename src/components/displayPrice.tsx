@@ -1,7 +1,7 @@
 import React from "react";
 import { Display, ProductInFo } from '../infrastructure/style'
 
-export const PriceCard = (props: { price: number, }) => {
+export const PriceCard = (props: { price: number | string, }) => {
     return (
         <>
             <Display.Wrapper>

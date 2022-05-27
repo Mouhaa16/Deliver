@@ -3,7 +3,7 @@ export const Pagetitle = {
   nav: styled.div`
     width: 100%;
     padding: 1.3rem 0.5rem;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     background-color: white;
