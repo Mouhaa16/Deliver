@@ -1,9 +1,8 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import { Route, Routes } from 'react-router-dom';
-import { MobileNav, Nav } from './components';
 import { Styles, CSSReset } from './infrastructure/style';
-import { Home, Notification, Profile, SendPackage, BarCode } from './features/'
+import { Home, Notification, Profile, SendPackage, BarCode, Address, } from './features/'
 const MyAppComponent = () => {
     return (
         <>
@@ -13,6 +12,8 @@ const MyAppComponent = () => {
                 <Route path='/send/package' element={<SendPackage />} />
                 <Route path='/barcode' element={<BarCode />} />
                 <Route path='/me' element={<Profile />} />
+                <Route path='/address' element={<Address />} />
+
             </Routes>
 
         </>

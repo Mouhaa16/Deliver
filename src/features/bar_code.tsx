@@ -1,5 +1,5 @@
 import React from "react";
-import { PageNav } from "../components";
+import { PageNav, QrCode } from "../components";
 import { Row } from "../infrastructure/style";
 import { useNavigate } from 'react-router-dom'
 
@@ -12,6 +12,11 @@ export const BarCode = () => {
                 navigate(-1)
                 throw new Error("Function not implemented.");
             }} />
+
+
+            <Row.Wrapper>
+                <QrCode link={"http://localhost:3000/"} />
+            </Row.Wrapper>
         </>
     )
 }

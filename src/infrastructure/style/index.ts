@@ -17,3 +17,4 @@ export * from "./add_card";
 export * from "./productinfo";
 export * from "./priceCard";
 export * from "./counter";
+export * from "./code";

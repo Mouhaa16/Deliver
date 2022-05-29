@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AddressCard, PageNav, ProductInfo, PriceCard, BottomDrawer, ItemInfo, BModal } from "../components";
+import { AddressCard, PageNav, ProductInfo, PriceCard, BottomDrawer, ItemInfo, BModal, PayMethod } from "../components";
 import { CSSReset, Row } from "../infrastructure/style";
 import { useNavigate } from 'react-router-dom'
 
@@ -22,7 +22,7 @@ export const SendPackage = () => {
                     onClickDestination={(e) => {
                         e.preventDefault()
                         try {
-                            alert()
+                            navigate('/address')
                         } catch (error) {
                             throw new Error('Error occurred!')
                         }
@@ -30,7 +30,7 @@ export const SendPackage = () => {
                     onClickPickUp={(e) => {
                         e.preventDefault()
                         try {
-                            alert()
+                            navigate('/address')
                         } catch (error) {
                             throw new Error('Error occurred!')
                         }
@@ -69,7 +69,7 @@ export const SendPackage = () => {
                         setSelectPayOpen(false), []
                     )
                 }
-                children={<div>no items</div>} />
+                children={<PayMethod />} />
             )
 
 

@@ -1,10 +1,13 @@
-import { PlusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { PlusOutlined } from '@ant-design/icons';
 import React from 'react';
+import { Address } from '../infrastructure/style';
 import { Iplusbtn } from '../interfaces';
 export const PlusIcon = (props: Iplusbtn) => {
     return (
         <>
-            <PlusCircleOutlined size={props.size} onClick={props.onClick} />
+            <Address.sticky>
+                <PlusOutlined size={props.size} onClick={props.onClick} />
+            </Address.sticky>
         </>
     );
 };

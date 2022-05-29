@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Carousel, MobileNav, Nav, Package, Services, SwitchBtn } from '../components/'
-import { HomeStyle, CSSReset, Row } from '../infrastructure/style'
+import { HomeStyle, CSSReset, Row, MobileNavbar } from '../infrastructure/style'
 import { Send } from 'react-feather';
 import { QrcodeOutlined, SendOutlined } from '@ant-design/icons'
 import { getAllPackages } from '../slices/package';
 import { useNavigate } from 'react-router-dom'
-
+import { useAppSelector } from '../infrastructure/store/hook'
 export const Home = () => {
     const navigate = useNavigate();
     const [switchtab, setSwitch] = useState(false)
-    const packages = useSelector(getAllPackages);
+    const packages = useAppSelector(getAllPackages);
     const onSwitch = (e: any) => {
         e.preventDefault();
         setSwitch(true)
@@ -71,7 +71,7 @@ export const Home = () => {
                             <div style={{ padding: '100px 110px', color: 'grey' }}>no sent packages</div>
                         )
                 }
-
+                <MobileNavbar.bottom />
             </Row.Wrapper>
             <MobileNav />
         </>

@@ -77,7 +77,7 @@ export const ItemInfo = () => {
             </ProductInFo.count>
         </ProductInFo.card>
         <ProductInFo.card>
-            <ProductInFo.camera>
+            <ProductInFo.camera onClick={() => alert()}>
                 <CameraOutlined style={{ fontSize: '30px' }} />
                 <ProductInFo.desc>upload item pic</ProductInFo.desc>
             </ProductInFo.camera>

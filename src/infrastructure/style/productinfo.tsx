@@ -85,7 +85,7 @@ export const ProductInFo = {
     count: styled.div`
        width:100%;
        padding:1rem;
-       margin-bottom:8px;
+       margin-bottom:15px;
     `,
     desc: styled.h4`
         font-family: 'Georgia';
@@ -121,6 +121,21 @@ export const ProductInFo = {
        border-radius:25px;
        color:white; 
        margin: 0 auto;
-       `
-
+       `,
+    wrapPbtn: styled.div`
+       padding:2rem;
+       background: #EEEEEE;
+       width:100%;
+       display:flex;
+       justify-content:center;
+    `,
+    paybtn: styled.input`
+        width:200px;
+       outline:none;
+       border:none;
+       padding:1rem;
+       background-color: white;
+       border-radius:5px;
+       margin-left:10px;
+    `
 }
