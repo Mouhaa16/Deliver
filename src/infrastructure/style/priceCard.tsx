@@ -30,10 +30,13 @@ export const Display = {
         outline:none;
     `,
     check: styled.input`
-    background-color: #000000;
+        background-color: #000000;
     `,
     line: styled.hr`
         background:#C4C4C4
         width:95%;
-        margin:0 auto;      `
+        margin:0 auto;  
+    `
+
+    
 }

@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { AddressCard, PageNav, ProductInfo, PriceCard, BottomDrawer, ItemInfo, BModal, PayMethod } from "../components";
 import { CSSReset, Row } from "../infrastructure/style";
 import { useNavigate } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from "../infrastructure/store/hook";
+import { RootState } from "../infrastructure/store/store";
+import { setBtnType } from "../slices/address";
 
 export const SendPackage = () => {
     const navigate = useNavigate();
     const [price, setPrice] = useState('--')
     const [openItemInfo, setItemInfoOpen] = useState(false)
     const [openSelectPay, setSelectPayOpen] = useState(false)
+    const dispatch = useAppDispatch()
     return (
         <>
             <PageNav
@@ -22,6 +26,7 @@ export const SendPackage = () => {
                     onClickDestination={(e) => {
                         e.preventDefault()
                         try {
+                            dispatch(setBtnType(true))
                             navigate('/address')
                         } catch (error) {
                             throw new Error('Error occurred!')
@@ -30,6 +35,7 @@ export const SendPackage = () => {
                     onClickPickUp={(e) => {
                         e.preventDefault()
                         try {
+                            dispatch(setBtnType(false))
                             navigate('/address')
                         } catch (error) {
                             throw new Error('Error occurred!')
@@ -53,7 +59,14 @@ export const SendPackage = () => {
                 }} />
             </Row.Wrapper>
 
-            <PriceCard price={price} />
+            <PriceCard price={price} onClickNext={function (e: any) {
+                try {
+                    if (price === null) return
+
+                } catch (error) {
+                    throw new Error("Function not implemented.");
+                }
+            }} />
 
             < BottomDrawer state={openItemInfo}
                 onCloseDrawer={
@@ -69,10 +82,8 @@ export const SendPackage = () => {
                         setSelectPayOpen(false), []
                     )
                 }
-                children={<PayMethod />} />
-            )
-
-
+                children={<PayMethod />}
+            />
         </>
     )
 }

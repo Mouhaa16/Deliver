@@ -1,13 +1,25 @@
+import React, { ChangeEvent, useState } from 'react'
 import { CameraOutlined } from '@ant-design/icons'
-import React, { useState } from 'react'
 import { ProductInFo, Row } from '../infrastructure/style'
 import { Counter } from './counter'
-import { minus, sum } from '../infrastructure/common'
-import { ProductInfo } from './product_info'
-import { height } from '@mui/system'
+
+import { useAppDispatch, useAppSelector } from '../infrastructure/store/hook'
+import {
+    addPieces,
+    addWeight,
+    getDesc,
+    getPieceValue,
+    getWeightValue,
+    setDesc,
+    subtractPiece,
+    subtractWeigth
+} from '../slices/package'
 export const ItemInfo = () => {
-    var [weigthvalue, setWeightValue] = useState(0);
-    var [piecevalue, setPieceValue] = useState(0);
+
+    const dispatch = useAppDispatch()
+    const weigthvalue = useAppSelector(getWeightValue)
+    const piecevalue = useAppSelector(getPieceValue)
+    const desc = useAppSelector(getDesc)
 
 
     return (<>
@@ -21,7 +33,8 @@ export const ItemInfo = () => {
                         e.preventDefault()
                         try {
                             if (weigthvalue <= 0) return;
-                            setWeightValue(minus(weigthvalue))
+                            dispatch(subtractWeigth())
+
                         } catch (error) {
                             throw new Error('Function not implemented.')
                         }
@@ -29,20 +42,11 @@ export const ItemInfo = () => {
                     } OnIncrease={function (e: any) {
                         e.preventDefault()
                         try {
-                            setWeightValue(sum(weigthvalue))
+                            dispatch(addWeight())
                         } catch (error) {
                             throw new Error('Function not implemented.')
                         }
                     }}
-                    OnchangeValue={function (e: any) {
-                        e.preventDefault()
-                        try {
-                            setWeightValue(e.target.value)
-                        } catch (error) {
-                            throw new Error('Function not implemented.')
-                        }
-                    }}
-
                 />
             </ProductInFo.count>
             <ProductInFo.count>
@@ -52,27 +56,20 @@ export const ItemInfo = () => {
                         e.preventDefault()
                         try {
                             if (piecevalue <= 0) return;
-                            setPieceValue(minus(piecevalue))
+                            dispatch(subtractPiece())
+
                         } catch (error) {
                             throw new Error('Function not implemented.')
                         }
                     }} OnIncrease={function (e: any) {
                         e.preventDefault()
                         try {
-                            setPieceValue(sum(piecevalue))
-                        } catch (error) {
-                            throw new Error('Function not implemented.')
-                        }
-                    }}
-                    OnchangeValue={function (e: any) {
-                        e.preventDefault()
-                        try {
-                            setPieceValue(e.target.value)
-                        } catch (error) {
-                            throw new Error('Function not implemented.')
-                        }
-                    }}
+                            dispatch(addPieces())
 
+                        } catch (error) {
+                            throw new Error('Function not implemented.')
+                        }
+                    }}
                 />
             </ProductInFo.count>
         </ProductInFo.card>
@@ -84,13 +81,17 @@ export const ItemInfo = () => {
         </ProductInFo.card>
 
         <ProductInFo.card>
-            <ProductInFo.textArea rows={10} cols={6} placeholder='enter description'></ProductInFo.textArea>
+            <ProductInFo.textArea
+                rows={10} cols={6}
+                value={desc}
+                placeholder='enter description'
+                onChange={(e) => dispatch(setDesc(e.target.value))}>
+
+            </ProductInFo.textArea>
         </ProductInFo.card>
 
-        <ProductInFo.wrap_save >
-            <ProductInFo.save type={'button'} value={'save'} />
-        </ProductInFo.wrap_save>
 
 
-    </>)
+    </>
+    )
 }

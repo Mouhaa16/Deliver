@@ -5,6 +5,8 @@ export const CountInc = {
          border:1px solid grey;
          width:fit-content;
          display:flex;
+         border-radius:6px;
+         padding:4px;
          left:0;
          float:right;    `,
     input: styled.input`

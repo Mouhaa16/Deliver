@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AddressComp, PageNav, PlusIcon } from "../components";
-import { useAppSelector } from '../infrastructure/store/hook'
+import { AddressCard, AddressComp, PageNav, PlusIcon } from "../components";
+import { useAppDispatch, useAppSelector } from '../infrastructure/store/hook'
+import { RootState } from "../infrastructure/store/store";
 import { Row } from "../infrastructure/style";
-import { getAllAddress } from '../slices/address'
+import { getAddressById, getAllAddress, getAllUserAddress } from '../slices/address'
 export const Address = () => {
-    const address = useAppSelector(getAllAddress)
+    const [address, setAddress] = useState<any>([])
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
 
+
+    useEffect(() => {
+        dispatch(getAllUserAddress())
+            .unwrap()
+            .then((resp: any) => {
+                console.log('from dispatch:', resp)
+                setAddress(resp)
+            })
+    })
     return (
         <>
             <PageNav
-                title={' Add Address'}
+                title={'Add Address'}
                 onClickBack={function (e: any) {
                     e.preventDefault()
                     navigate(-1)
@@ -23,27 +34,21 @@ export const Address = () => {
                         return (
                             < AddressComp
                                 key={addr.id}
+                                id={addr.id}
                                 name={addr.name}
                                 phone={addr.phone}
                                 city={addr.city}
                                 LGA={addr.LGA}
                                 detail={addr.area_detail}
-                                onClick={(e) => {
-                                    e.preventDefault()
-
-                                }}
-                                onEdit={(e) => {
-                                    e.preventDefault()
-                                }}
                             />
                         )
                     })
                 }
 
-                <PlusIcon size={30} onClick={function (e: any) {
+                <PlusIcon size={40} onClick={function (e: any) {
                     e.preventDefault()
                     try {
-                        alert()
+                        navigate('/new-address')
                     } catch (error) {
                         throw new Error("Function not implemented.");
 

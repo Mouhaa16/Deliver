@@ -5,10 +5,7 @@ export const Counter = (props:
         value: number,
         OnDecrease(e: any): any,
         OnIncrease(e: any): any,
-        OnchangeValue(e: any): any,
     }) => {
-
-
     return (
         <>
             <CountInc.Wrapper>
@@ -17,9 +14,10 @@ export const Counter = (props:
                     value={'-'}
                     onClick={(e: any) => props.OnDecrease(e)} />
                 <CountInc.input
+                    disabled={true}
                     type={'text'}
                     value={props.value}
-                    onChange={(e) => props.OnchangeValue(e)} />
+                />
                 <CountInc.btn
                     type={'button'}
                     value={'+'}

@@ -1,31 +1,59 @@
 import React from 'react';
-import { Send, User, Bell } from 'react-feather';
+import { Send, User, Bell, MessageCircle } from 'react-feather';
 import { MobileNavbar } from '../infrastructure/style';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { border } from '@mui/system';
 
 export const MobileNav = () => {
+    const navigate = useNavigate()
+    const [active, setActive] = useState('')
+    const style = {
+        borderRadius: '5px',
+        padding: '2px',
+        color: 'lightblue'
+    }
     return (
         <MobileNavbar.Wrapper>
             <MobileNavbar.Items>
                 <MobileNavbar.Item>
                     <MobileNavbar.Icon>
-                        <Link to='/' style={{ color: 'black' }}>
-                            <Send size={25} />
-                        </Link>
+                        <Send style={active === 'send' ? style : {
+                            background: 'none'
+                        }} size={25} onClick={() => {
+                            setActive('send')
+                            navigate('/')
+                        }} />
                     </MobileNavbar.Icon>
                 </MobileNavbar.Item>
                 <MobileNavbar.Item>
                     <MobileNavbar.Icon>
-                        <Link to="/notification" style={{ color: 'black' }}>
-                            <Bell size={25} />
-                        </Link>
+                        <Bell style={active === 'bell' ? style : {
+                            background: 'none'
+                        }} size={25} onClick={() => {
+                            setActive('bell')
+                            navigate('/notification')
+                        }} />
                     </MobileNavbar.Icon>
                 </MobileNavbar.Item>
                 <MobileNavbar.Item>
                     <MobileNavbar.Icon>
-                        <Link to="/me" style={{ color: 'black' }}>
-                            <User size={25} />
-                        </Link>
+                        <MessageCircle style={active === 'msg' ? style : {
+                            background: 'none'
+                        }} size={25} onClick={() => {
+                            setActive('msg')
+                            navigate('/messages')
+                        }} />
+                    </MobileNavbar.Icon>
+                </MobileNavbar.Item>
+                <MobileNavbar.Item>
+                    <MobileNavbar.Icon>
+                        <User style={active === 'me' ? style : {
+                            background: 'none'
+                        }} size={25} onClick={() => {
+                            setActive('me')
+                            navigate('/me')
+                        }} />
                     </MobileNavbar.Icon>
                 </MobileNavbar.Item>
             </MobileNavbar.Items>

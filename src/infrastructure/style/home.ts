@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const HomeStyle = {
   card: styled.div`
+    position: relative;
     border-radius: 10px;
     background-color: white;
     font-size: 20px;
@@ -8,6 +9,7 @@ export const HomeStyle = {
     height: 136px;
   `,
   WrapperA: styled.div`
+    position: relative;
     width: 100%;
     height: 70px;
     margin-top: 10px;

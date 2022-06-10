@@ -15,7 +15,7 @@ export const BarCode = () => {
 
 
             <Row.Wrapper>
-                <QrCode link={"http://localhost:3000/"} />
+                <QrCode link={"https://deliver-aa5e5.web.app/"} />
             </Row.Wrapper>
         </>
     )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Carousel, MobileNav, Nav, Package, Services, SwitchBtn } from '../components/'
 import { HomeStyle, CSSReset, Row, MobileNavbar } from '../infrastructure/style'
@@ -6,15 +6,23 @@ import { Send } from 'react-feather';
 import { QrcodeOutlined, SendOutlined } from '@ant-design/icons'
 import { getAllPackages } from '../slices/package';
 import { useNavigate } from 'react-router-dom'
-import { useAppSelector } from '../infrastructure/store/hook'
+import { useAppDispatch } from '../infrastructure/store/hook'
 export const Home = () => {
+
     const navigate = useNavigate();
     const [switchtab, setSwitch] = useState(false)
-    const packages = useAppSelector(getAllPackages);
+    const [packages, setPackages] = useState<any>([])
+    const dispatch = useAppDispatch()
     const onSwitch = (e: any) => {
         e.preventDefault();
         setSwitch(true)
     }
+    useEffect(() => {
+        dispatch(getAllPackages()).unwrap().then((resp: any) => {
+            console.log(resp)
+            setPackages(resp)
+        })
+    })
 
     return (
         <>
@@ -53,7 +61,8 @@ export const Home = () => {
                     </HomeStyle.align>
                 </Services>
                 <SwitchBtn
-                    onChange={(e) => onSwitch(e)} />{
+                    onChange={(e) => onSwitch(e)} />
+                {
 
                     packages.length > 0 ?
                         packages.map((pkg: any, index: number) => {

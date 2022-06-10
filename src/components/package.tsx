@@ -1,13 +1,7 @@
 import React from 'react'
 import { HomeStyle } from '../infrastructure/style'
-interface IPackage {
-    company_name: string;
-    image: string;
-    product_name: string;
-    switch: boolean;
-    from: string
+import { IPackage } from '../interfaces'
 
-}
 export const Package = (props: IPackage) => {
 
 

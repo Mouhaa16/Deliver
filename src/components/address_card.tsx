@@ -1,15 +1,46 @@
-import { RightOutlined, EditOutlined } from '@ant-design/icons'
 import React from 'react'
+import { RightOutlined, EditOutlined } from '@ant-design/icons'
+import { useNavigate } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../infrastructure/store/hook'
+import { RootState } from '../infrastructure/store/store'
 import { Address } from '../infrastructure/style'
+import { CurrentPickupAddress, CurrentdestAddress, getAddressById, setCurrentPick, get, setcurrentDest } from '../slices/address'
+import { DisplayAddress } from './displayAddress'
 import { PlusIcon } from './plusIcon'
-export const AddressCard = (props: { onClickDestination(e: any): any, onClickPickUp(e: any): any }) => {
+export const AddressCard = (
+    props: {
+        title?: string,
+        onClickDestination(e: any): any,
+        onClickPickUp(e: any): any
+    }) => {
+
+    const currentPickUpAddress: any = useAppSelector(CurrentPickupAddress)
+    const currentDestAddress: any = useAppSelector(CurrentdestAddress)
+
     return (<>
 
         <Address.Wrapper>
-
-            <SelectButton title='kano, kubotso LGA, behind Gasau petrol Station . . .' onClick={(e) => props.onClickPickUp(e)} />
-            {/* <Address.line></Address.line> */}
-            <SelectButton title='Add destination address' onClick={(e) => props.onClickPickUp(e)} />
+            {
+                Object.keys(currentPickUpAddress).length !== 0
+                    ?
+                    <DisplayAddress
+                        detail={currentPickUpAddress} onClick={function (e: any) {
+                            return props.onClickPickUp(e)
+                        }} />
+                    : <SelectButton
+                        title={'Add pickup address'}
+                        onClick={(e) => props.onClickPickUp(e)} />}
+            <Address.underline></Address.underline>
+            {
+                Object.keys(currentDestAddress).length !== 0
+                    ?
+                    <DisplayAddress
+                        detail={currentDestAddress} onClick={function (e: any) {
+                            return props.onClickDestination(e)
+                        }} />
+                    : <SelectButton
+                        title='Add destination address'
+                        onClick={(e) => props.onClickDestination(e)} />}
 
         </Address.Wrapper>
 
@@ -43,27 +74,52 @@ const SelectButton = (prop: {
 
 export const AddressComp = (
     props: {
+        id: string;
         name: string,
         phone: string,
         city: string,
         LGA: string,
         detail: string,
-        onClick(e: any): any,
-        onEdit(e: any): any
+
     }) => {
+    const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+    const btn_type = useAppSelector(get)
+    const address: any = useAppSelector(
+        (state: RootState) =>
+            getAddressById(state, props.id));
+    const OnClick = (e: any) => {
+        e.preventDefault()
+        try {
+            if (btn_type === false) {
+                dispatch(setCurrentPick(address))
+            }
+            else {
+                dispatch(setcurrentDest(address))
+            }
+            navigate(-1)
+        } catch (error) {
+            throw new Error('something went wrong!')
+        }
+    }
+    const OnEdit = (e: any) => {
+
+
+    }
     return (
         <>
-            <Address.container onClick={(e) => props.onClick(e)}>
+            <Address.container onClick={(e) => OnClick(e)}>
                 <Address.content_name>{props.name}<br />{props.phone}</Address.content_name>
                 <Address.wrapContent>
                     <Address.content>{props.city},{props.LGA},{props.detail}. . .</Address.content>
                     <Address.edit
                         type={'button'}
                         value={'edit'}
-                        onClick={(e) => props.onEdit(e)} />
+                        onClick={(e) => OnEdit(e)} />
                 </Address.wrapContent>
             </Address.container>
 
         </>
     )
 }
+

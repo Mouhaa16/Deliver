@@ -8,7 +8,7 @@ export const PageNav = (prop: { title: string, onClickBack(e: any): any }) => {
                 <Pagetitle.wrap>
                     <LeftOutlined
                         style={{ fontSize: '22px', color: 'black' }}
-                        onClick={(e) => prop.onClickBack(e)} />
+                        onClick={(e: any) => prop.onClickBack(e)} />
                 </Pagetitle.wrap>
                 <Pagetitle.title>{prop.title}</Pagetitle.title>
             </Pagetitle.nav>

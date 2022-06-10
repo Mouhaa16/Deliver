@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Row = {
   Wrapper: styled.div`
-    position: absolute;
     margin-top: 60px;
     flex-wrap: nowrap;
     width: 100%;
@@ -12,7 +11,6 @@ export const Row = {
     padding: 1rem;
   `,
   Wrap: styled.div`
-    position: absolute;
     border-radius: 15px;
     margin-top: 60px;
     flex-wrap: nowrap;

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 export const Navbar = {
     Wrapper: styled.nav`
+        position: absolute;
+        width:100%;
         flex: 1;
         align-self: flex-start;
         padding: 1rem 3rem;
@@ -23,3 +25,5 @@ export const Navbar = {
     `,
     Icon: styled.span``,
 };
+
+

@@ -84,8 +84,10 @@ export const ProductInFo = {
          `,
     count: styled.div`
        width:100%;
-       padding:1rem;
-       margin-bottom:15px;
+       padding:0.5rem;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
     `,
     desc: styled.h4`
         font-family: 'Georgia';
@@ -129,11 +131,13 @@ export const ProductInFo = {
        display:flex;
        justify-content:center;
     `,
-    paybtn: styled.input`
-        width:200px;
+    paybtn: styled.div`
+       width:220px;
+       height:150px
        outline:none;
        border:none;
-       padding:1rem;
+       padding:1.3rem;
+       text-align:center;
        background-color: white;
        border-radius:5px;
        margin-left:10px;

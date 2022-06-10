@@ -14,6 +14,7 @@ export const MobileNavbar = {
     position: fixed;
     width: 100vw;
     bottom: 0;
+    padding: 1rem;
     justify-content: center;
   `,
   Items: styled(Navbar.Items)`
